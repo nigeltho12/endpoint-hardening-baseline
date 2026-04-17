@@ -10,7 +10,7 @@
 
 ## Overview
 
-This repository documents a dual-platform endpoint hardening baseline aligned to the **CIS (Center for Internet Security) Benchmark** for both Windows and macOS. It is designed for use in enterprise environments where both platforms are managed in parallel — a common scenario in organizations running Microsoft Intune + Jamf.
+This repository documents a dual-platform endpoint hardening baseline aligned to the **CIS (Center for Internet Security) Benchmark** for both Windows and macOS. It is designed for use in enterprise environments where both platforms are managed in parallel; a common scenario in organizations running Microsoft Intune + Jamf.
 
 The goal is not to run a script and call it done. Each control is documented with:
 - **What it does** — the technical change being made
@@ -55,7 +55,7 @@ endpoint-hardening-baseline/
 
 ## Audit Scripts
 
-Both scripts are **read-only**. They check the current state and report findings — they do not make changes to the system.
+Both scripts are **read-only**. They check the current state and report findings; they do not make changes to the system.
 
 | Script | Platform | Run As |
 |---|---|---|
