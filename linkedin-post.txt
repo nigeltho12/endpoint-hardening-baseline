@@ -1,0 +1,34 @@
+LINKEDIN POST DRAFT
+────────────────────────────────────────────────────────────
+
+This weekend I built something I've been wanting to document properly for a while.
+
+A dual-platform endpoint hardening baseline — Windows and macOS side by side — with CIS Benchmark controls, documented rationale for each one, and PowerShell / Bash audit scripts you can actually run.
+
+Here's why I built it the way I did:
+
+Most hardening checklists tell you *what* to configure. They don't explain *why the control exists* or *what the threat is* if you skip it. That gap matters, especially in environments where you're explaining decisions to leadership or justifying policy to engineers who are going to push back.
+
+So every control in this repo has three things:
+— What the setting does technically
+— What attack or risk it mitigates
+— How to audit the current state without touching anything
+
+The audit scripts output PASS / FAIL / MANUAL to give you a clear picture of where an endpoint stands before you make a single change.
+
+I also put together a comparison document mapping equivalent controls across both platforms — particularly useful for orgs running Intune + Jamf in parallel. The gaps section at the end covers what I see most often: FileVault not enforced while BitLocker is, macOS endpoints missing from the SIEM pipeline, SIP disabled on dev machines with no compensating controls.
+
+Tech stack: PowerShell, Bash, CIS Benchmark v3.0 (Windows 11 + macOS 14 Sonoma)
+
+Repo is live: github.com/nigeltho12/endpoint-hardening-baseline
+
+If you're managing a mixed-OS fleet or building out an endpoint security program, feel free to fork it and adapt it to your environment.
+
+────────────────────────────────────────────────────────────
+
+NOTES FOR POSTING:
+- Paste as plain text into LinkedIn — do not include the dashes or "NOTES" section
+- Add the GitHub link as a comment on the post (LinkedIn depresses reach on posts with external links)
+- Tag: #cybersecurity #endpointsecurity #CISbenchmark #infosec #WindowsSecurity #macOS
+- Post on a weekday morning for best reach (Tuesday–Thursday, 8–10am)
+- Keep the GitHub link in the first comment, not the post body
